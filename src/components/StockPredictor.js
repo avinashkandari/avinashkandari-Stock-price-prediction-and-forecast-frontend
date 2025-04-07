@@ -54,7 +54,7 @@ function StockPredictor() {
     setProgress(0);
     
     try {
-      const response = await fetch('http://localhost:5000/api/train', {
+      const response = await fetch('https://stock-price-prediction-and-forcast.onrender.com/api/train', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -77,7 +77,7 @@ function StockPredictor() {
 
   const pollForResults = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/predict/${ticker}`);
+      const response = await fetch(`https://stock-price-prediction-and-forcast.onrender.com/api/predict/${ticker}`);
       const data = await response.json();
       
       setPollCount(prev => prev + 1);
