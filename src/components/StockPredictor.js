@@ -308,7 +308,7 @@ function StockPredictor() {
                             },
                             ticks: {
                               autoSkip: true,
-                              maxTicksLimit: 10,
+                              maxTicksLimit: 30,
                               font: {
                                 size: 12
                               },
